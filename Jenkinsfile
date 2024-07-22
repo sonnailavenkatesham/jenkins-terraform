@@ -23,6 +23,15 @@ pipeline{
                 terraform plan
                 '''
             }
+        }
+        stage("apply"){
+            steps{
+                sh'''
+                pwd
+                ls -l
+                terraform apply -auto-approve
+                '''
+            }
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
