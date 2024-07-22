@@ -30,4 +30,12 @@ pipeline{
         }
 
     }
+    post{
+        success{
+            echo 'pipeline success'
+        }
+        failure{
+            echo 'pipeline failed'
+        }
+    }
 }
