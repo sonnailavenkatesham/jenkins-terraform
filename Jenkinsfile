@@ -14,6 +14,15 @@ pipeline{
                 '''
             }
         }
+        stage("init"){
+            steps{
+                sh'''
+                pwd
+                ls -l
+                terraform plan
+                '''
+            }
+        }
 
     }
 }
