@@ -14,7 +14,7 @@ pipeline{
                 '''
             }
         }
-        stage("init"){
+        stage("plan"){
             steps{
                 sh'''
                 pwd
