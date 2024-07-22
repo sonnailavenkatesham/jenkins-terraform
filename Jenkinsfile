@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    timeout{ time: 1 unit: "minute"}
+    timeout(time: 1, unit: 'minute')
     stages{
         stage("init"){
             steps{
