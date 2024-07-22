@@ -20,6 +20,7 @@ pipeline{
                 terraform plan
                 '''
             }
+        }
 
     }
     post{
