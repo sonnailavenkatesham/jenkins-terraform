@@ -1,5 +1,8 @@
 pipeline{
     agent { label 'Agent' }
+    options {
+        ansiColor('xterm')
+    }
     stages{
         stage("init"){
             steps{
@@ -13,25 +16,10 @@ pipeline{
         stage("plan"){
             steps{
                 sh'''
-                pwd
                 ls -l
                 terraform plan
                 '''
             }
-        }
-        stage("apply"){
-            steps{
-                sh'''
-                pwd
-                ls -l
-                terraform apply -auto-approve
-                '''
-            }
-            input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                }
-        }
 
     }
     post{
