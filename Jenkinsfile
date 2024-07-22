@@ -10,6 +10,7 @@ pipeline{
                 sh'''
                 pwd
                 ls -l
+                terraform init
                 '''
             }
         }
